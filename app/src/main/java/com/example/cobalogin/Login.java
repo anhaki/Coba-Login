@@ -27,8 +27,17 @@ public class Login extends AppCompatActivity {
     public void prosesLogin(View view) {
         username = etUsername.getText().toString();
         password = etPassword.getText().toString();
-        if(username.equals("admin") && password.equals("admin")){
-            LM.setPref(Login.this, keySPusername,username);
+
+        if (username.trim().equals("") || password.trim().equals("")) {
+            if (username.trim().equals("")){
+                etUsername.setError("Username tidak boleh kosong!");
+            }
+            if (password.trim().equals("")){
+                etPassword.setError("Password tidak boleh kosong!");
+            }
+        }
+        else if(username.equals("admin") && password.equals("admin")){
+            LM.setPref(Login.this, MainActivity.keySPusername,username);
             startActivity(new Intent(Login.this,
                     MainActivity.class));
             finish();
