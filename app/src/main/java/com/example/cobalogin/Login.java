@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
         }
         else if(username.equals("Haki") && password.equals("123")){
             LM.setPref(Login.this, MainActivity.keySPusername,username);
-            LM.setPref(Login.this, MainActivity.keySPname,username);
+            LM.setPref(Login.this, MainActivity.keySPname,"Muhammad Anugrah Hakiki");
             startActivity(new Intent(Login.this,
                     MainActivity.class));
             finish();

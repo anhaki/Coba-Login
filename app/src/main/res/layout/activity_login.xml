@@ -35,7 +35,7 @@
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#3ACC05"
         android:text="LOGIN"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
