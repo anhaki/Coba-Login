@@ -14,7 +14,6 @@ public class Login extends AppCompatActivity {
     private Button btnLogin;
     private String username, password;
     LoginMec LM = new LoginMec();
-    public static String keySPusername = "HakikiWADAW";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +35,9 @@ public class Login extends AppCompatActivity {
                 etPassword.setError("Password tidak boleh kosong!");
             }
         }
-        else if(username.equals("admin") && password.equals("admin")){
+        else if(username.equals("Haki") && password.equals("123")){
             LM.setPref(Login.this, MainActivity.keySPusername,username);
+            LM.setPref(Login.this, MainActivity.keySPname,username);
             startActivity(new Intent(Login.this,
                     MainActivity.class));
             finish();
